@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Case: Prestaclub x Atom</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        atomOrange: '#E48C4A',
+                        atomBlack: '#111213',
+                        atomGreyDark: '#2f3237',
+                        atomGreen: '#00a627',
+                        atomGreyText: '#7C98B6',
+                        atomBgLight: '#F5F8FA',
+                    },
+                    fontFamily: {
+                        sans: ['Figtree', 'sans-serif'],
+                        serif: ['Raleway', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-serif { font-family: 'Raleway', sans-serif; }
+        .nav-shadow { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .gradient-section { background: linear-gradient(145deg, #FFF7F5 0%, #FFF0EC 100%); }
+        .timeline-line { width: 2px; background: #E2E8F0; position: absolute; left: 50%; transform: translateX(-50%); height: 100%; z-index: 0; }
+        .timeline-dot { width: 40px; height: 40px; background: white; border: 4px solid #E48C4A; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 10; font-weight: bold; }
+        @media (max-width: 768px) { .timeline-line { left: 20px; } .timeline-dot { left: 0; } }
+    </style>
+    {{ standard_header_includes }}
+</head>
+<body class="bg-atomBgLight text-atomGreyDark font-sans selection:bg-atomOrange selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 glass border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <img src="https://hubspot-integrators-prod.s3.amazonaws.com/listing/1053281.png" alt="Atom Logo" class="h-8 w-auto">
+                    <div class="w-px h-8 bg-gray-200"></div>
+                    <div class="flex items-center">
+                        <img src="https://logo.clearbit.com/prestaclub.com" alt="Logo de Prestaclub" class="h-8 w-auto" 
+                             onerror="this.style.display='none'; document.getElementById('logo-placeholder').style.display='flex'">
+                        <div id="logo-placeholder" style="display:none;" class="items-center">
+                             <img src="https://placehold.co/150x40/f5f8fa/33475B?text=Prestaclub" alt="Logo de Prestaclub" class="h-8 w-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+                    <a href="#diagnostico" class="hover:text-atomOrange transition-colors">Diagnóstico</a>
+                    <a href="#solucion" class="hover:text-atomOrange transition-colors">Solución</a>
+                    <a href="#implementacion" class="hover:text-atomOrange transition-colors">Implementación</a>
+                    <a href="#inversion" class="hover:text-atomOrange transition-colors">Propuesta Comercial</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-atomOrange text-atomBlack">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <span class="inline-block px-4 py-1 rounded-full bg-black/10 text-xs font-bold uppercase tracking-widest mb-4 text-black">Business Case para Prestaclub</span>
+            <h1 class="text-4xl md:text-6xl font-serif font-extrabold mb-6 leading-tight">
+                Recuperando el Potencial <br> de Contactabilidad
+            </h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto opacity-90 leading-relaxed font-light">
+                Para Prestaclub, cada lead pre-filtrado representa un compromiso financiero. Atom Chat propone unificar la gestión comercial mediante IA para elevar la contactabilidad del 30% al 75%, asegurando que ningún cliente potencial se quede sin respuesta.
+            </p>
+        </div>
+    </section>
+
+    <!-- Voice of Customer -->
+    <section id="diagnostico" class="py-24 gradient-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif text-center mb-16">Lo que escuchamos del equipo de Prestaclub</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Quote 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-atomGreen" data-aos="fade-up" data-aos-delay="100">
+                    <svg class="w-10 h-10 text-atomOrange mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V5C14.017 3.89543 14.9124 3 16.017 3H19.017C21.2261 3 23.017 4.79086 23.017 7V15C23.017 17.2091 21.2261 19 19.017 19H17.017L14.017 21ZM1 21L1 18C1 16.8954 1.89543 16 3 16H6C6.55228 16 7 15.5523 7 15V9C7 8.44772 6.55228 8 6 8H3C1.89543 8 1 7.10457 1 6V5C1 3.89543 1.89543 3 3 3H6C8.20914 3 10 4.79086 10 7V15C10 17.2091 8.20914 19 6 19H4L1 21Z"/></svg>
+                    <p class="text-atomGreyDark italic mb-4">"Mi talón de Aquiles ahorita es la contactabilidad. Los llamo y ya no me contesta el 60% de esos leads filtrados."</p>
+                    <p class="text-sm font-bold text-atomOrange">Juan Diego Cañamero, CEO</p>
+                </div>
+                <!-- Quote 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-atomGreen" data-aos="fade-up" data-aos-delay="200">
+                    <svg class="w-10 h-10 text-atomOrange mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V5C14.017 3.89543 14.9124 3 16.017 3H19.017C21.2261 3 23.017 4.79086 23.017 7V15C23.017 17.2091 21.2261 19 19.017 19H17.017L14.017 21ZM1 21L1 18C1 16.8954 1.89543 16 3 16H6C6.55228 16 7 15.5523 7 15V9C7 8.44772 6.55228 8 6 8H3C1.89543 8 1 7.10457 1 6V5C1 3.89543 1.89543 3 3 3H6C8.20914 3 10 4.79086 10 7V15C10 17.2091 8.20914 19 6 19H4L1 21Z"/></svg>
+                    <p class="text-atomGreyDark italic mb-4">"Si me duplican ese ratio... el servicio prácticamente se paga solo."</p>
+                    <p class="text-sm font-bold text-atomOrange">Juan Diego Cañamero, CEO</p>
+                </div>
+                <!-- Quote 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-atomGreen" data-aos="fade-up" data-aos-delay="300">
+                    <svg class="w-10 h-10 text-atomOrange mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V5C14.017 3.89543 14.9124 3 16.017 3H19.017C21.2261 3 23.017 4.79086 23.017 7V15C23.017 17.2091 21.2261 19 19.017 19H17.017L14.017 21ZM1 21L1 18C1 16.8954 1.89543 16 3 16H6C6.55228 16 7 15.5523 7 15V9C7 8.44772 6.55228 8 6 8H3C1.89543 8 1 7.10457 1 6V5C1 3.89543 1.89543 3 3 3H6C8.20914 3 10 4.79086 10 7V15C10 17.2091 8.20914 19 6 19H4L1 21Z"/></svg>
+                    <p class="text-atomGreyDark italic mb-4">"A un bot no le vas a dar información sensible... los tratos se cierran en llamada, pero ese contacto inicial es clave."</p>
+                    <p class="text-sm font-bold text-atomOrange">Juan Diego Cañamero, CEO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnosis vs Solution -->
+    <section id="solucion" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Estado Actual -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-serif mb-8 text-red-600 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        Estado Actual (Desafío)
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-red-100 p-2 rounded-lg"><svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg></div>
+                            <p class="ml-4 text-atomGreyDark">Tasa de contactabilidad del 25-30% en leads filtrados.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-red-100 p-2 rounded-lg"><svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg></div>
+                            <p class="ml-4 text-atomGreyDark">Pérdida de inversión en marketing por falta de respuesta inmediata.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-red-100 p-2 rounded-lg"><svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg></div>
+                            <p class="ml-4 text-atomGreyDark">Gestión manual que satura a los 7 comerciales con tareas repetitivas.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Estado Futuro -->
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-serif mb-8 text-atomGreen flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Estado Futuro (Con Atom Chat)
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-green-100 p-2 rounded-lg"><svg class="w-5 h-5 text-atomGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                            <p class="ml-4 text-atomGreyDark font-semibold">Tasa de contactabilidad garantizada de hasta el 75%.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-green-100 p-2 rounded-lg"><svg class="w-5 h-5 text-atomGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                            <p class="ml-4 text-atomGreyDark">Agente de IA que mantiene el contacto inicial 24/7 de forma personalizada.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-green-100 p-2 rounded-lg"><svg class="w-5 h-5 text-atomGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                            <p class="ml-4 text-atomGreyDark">Redireccionamiento inteligente al equipo comercial para cierre de alta fidelidad.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 bg-green-100 p-2 rounded-lg"><svg class="w-5 h-5 text-atomGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                            <p class="ml-4 text-atomGreyDark">Integración total con CRM para trazabilidad completa del embudo.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan de Implementación -->
+    <section id="implementacion" class="py-24 bg-atomBgLight overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <h2 class="text-3xl font-serif text-center mb-16">¿Cómo llegamos ahí? Plan de Implementación</h2>
+            
+            <div class="timeline-line hidden md:block"></div>
+            
+            <!-- Step 1 -->
+            <div class="relative mb-12 flex flex-col md:flex-row items-center" data-aos="fade-up">
+                <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                    <h4 class="text-xl font-bold text-atomOrange">1. Kickoff Estratégico</h4>
+                    <p class="text-sm text-atomGreyDark">Alineación de equipos, validación de alcance y roadmap formal de inicio.</p>
+                </div>
+                <div class="timeline-dot">1</div>
+                <div class="md:w-1/2 md:pl-12"></div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative mb-12 flex flex-col md:flex-row items-center" data-aos="fade-up">
+                <div class="md:w-1/2 md:pr-12"></div>
+                <div class="timeline-dot">2</div>
+                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                    <h4 class="text-xl font-bold text-atomOrange">2. Diseño CUX & IA</h4>
+                    <p class="text-sm text-atomGreyDark">Levantamiento de información y diseño de flujos conversacionales enfocados en contactabilidad.</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative mb-12 flex flex-col md:flex-row items-center" data-aos="fade-up">
+                <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                    <h4 class="text-xl font-bold text-atomOrange">3. Construcción & Entrenamiento</h4>
+                    <p class="text-sm text-atomGreyDark">Configuración técnica de bots Inbound y capacitación al equipo comercial de Prestaclub.</p>
+                </div>
+                <div class="timeline-dot">3</div>
+                <div class="md:w-1/2 md:pl-12"></div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="relative mb-12 flex flex-col md:flex-row items-center" data-aos="fade-up">
+                <div class="md:w-1/2 md:pr-12"></div>
+                <div class="timeline-dot">4</div>
+                <div class="md:w-1/2 md:pl-12 mt-4 md:mt-0">
+                    <h4 class="text-xl font-bold text-atomOrange">4. Go-Live & Producción</h4>
+                    <p class="text-sm text-atomGreyDark">Habilitación de canales productivos, monitoreo inicial y ajustes finos de estabilidad.</p>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                    <h4 class="text-xl font-bold text-atomOrange">5. Handoff a CSM</h4>
+                    <p class="text-sm text-atomGreyDark">Entrega oficial a Customer Success para optimización continua del ROI (Duración: 4-6 semanas).</p>
+                </div>
+                <div class="timeline-dot">5</div>
+                <div class="md:w-1/2 md:pl-12"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inversión - Propuesta Comercial -->
+    <section id="inversion" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif text-center mb-6">Propuesta Comercial Personalizada</h2>
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <p class="text-atomGreyText text-lg leading-relaxed">
+                    Para ser completamente transparente contigo: en ambos casos estamos otorgando cerca de un <strong>10% adicional de descuento</strong> sobre lo que normalmente podríamos aprobar, justamente para acercarnos al rango que conversamos y facilitar que podamos empezar a trabajar juntos.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <!-- Escenario A -->
+                <div class="border-2 border-atomOrange rounded-3xl p-8 shadow-2xl bg-white relative overflow-hidden transform hover:-translate-y-2 transition-all duration-300" data-aos="fade-right">
+                    <div class="absolute top-0 right-0 bg-atomOrange text-white px-6 py-2 text-xs font-bold rounded-bl-xl uppercase tracking-widest">Recomendado</div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-serif font-extrabold text-atomBlack mb-2">Escenario A</h3>
+                        <p class="text-sm text-atomGreyText font-semibold">Mejor condición financiera</p>
+                    </div>
+                    <div class="mb-10">
+                        <p class="text-5xl font-serif font-extrabold text-atomBlack mb-1">$880 <span class="text-base font-normal text-atomGreyText">USD/mes</span></p>
+                        <p class="text-atomGreen font-bold text-sm">20% OFF durante los primeros 6 meses</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 text-sm">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-atomGreen mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Condición:</strong> Pago anticipado (Transferencia o TC).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-atomGreen mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Compromiso:</strong> 6 meses de servicio garantizado.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-atomGreen mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Valor:</strong> Maximiza el ahorro y reduce el costo efectivo inicial.</span>
+                        </li>
+                    </ul>
+                    <p class="text-xs text-gray-500 italic">"Este escenario es el más conveniente para Prestaclub, pues asegura el retorno de inversión más rápido."</p>
+                </div>
+
+                <!-- Escenario B -->
+                <div class="border border-gray-200 rounded-3xl p-8 shadow-lg bg-atomBgLight hover:shadow-xl transition-all duration-300" data-aos="fade-left">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-serif font-extrabold text-atomBlack mb-2">Escenario B</h3>
+                        <p class="text-sm text-atomGreyText font-semibold">Sin pago anticipado</p>
+                    </div>
+                    <div class="mb-10">
+                        <p class="text-5xl font-serif font-extrabold text-atomBlack mb-1">$935 <span class="text-base font-normal text-atomGreyText">USD/mes</span></p>
+                        <p class="text-atomGreen font-bold text-sm">15% OFF durante los primeros 6 meses</p>
+                    </div>
+                    <ul class="space-y-4 mb-10 text-sm">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-atomGreen mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Condición:</strong> Pago mensual recurrente con TC.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-atomGreen mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Flexibilidad:</strong> Sin cláusula de permanencia (Self-service).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-atomGreen mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Validación:</strong> Ideal para validar resultados con tranquilidad mes a mes.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Transparency Message -->
+            <div class="max-w-4xl mx-auto mt-16 bg-atomGreyDark text-white p-8 rounded-2xl shadow-xl" data-aos="zoom-in">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-6 md:mb-0 md:mr-8">
+                        <h4 class="text-xl font-bold text-atomOrange mb-2 underline decoration-atomOrange decoration-2 underline-offset-4">Resumen de beneficios</h4>
+                        <p class="text-sm text-gray-300">Ambos escenarios incluyen la exoneración del costo de implementación ($1,000 USD) acordado en nuestra sesión.</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs uppercase tracking-widest text-atomGreen font-bold mb-2">Plan Professional Incluye:</p>
+                        <p class="text-sm">5,500 conversaciones/mes • 3 líneas WA • IA Personalizada</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources / Legal Buttons -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://info.atomchat.io/terminos-y-condiciones-de-suscripcion-de-atom" target="_blank" class="px-6 py-3 bg-white border border-gray-200 rounded-lg text-sm font-semibold hover:border-atomOrange transition-all shadow-sm">Términos y Condiciones</a>
+                <a href="https://info.atomchat.io/acuerdo-de-nivel-de-servicio-atom-ans" target="_blank" class="px-6 py-3 bg-white border border-gray-200 rounded-lg text-sm font-semibold hover:border-atomOrange transition-all shadow-sm">Acuerdo de Nivel de Servicio (ANS)</a>
+                <a href="https://info.atomchat.io/politica-de-tratamiento-de-datos" target="_blank" class="px-6 py-3 bg-white border border-gray-200 rounded-lg text-sm font-semibold hover:border-atomOrange transition-all shadow-sm">Tratamiento de Datos</a>
+                <a href="https://info.atomchat.io/pol%C3%ADtica-de-seguridad-de-la-informaci%C3%B3n" target="_blank" class="px-6 py-3 bg-white border border-gray-200 rounded-lg text-sm font-semibold hover:border-atomOrange transition-all shadow-sm">Seguridad de la Información</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-atomGreen text-white overflow-hidden relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="zoom-in">
+            <h2 class="text-4xl md:text-5xl font-serif font-extrabold mb-8 leading-tight text-white">
+                Listos para transformar <br> la operación de Prestaclub
+            </h2>
+            <p class="text-xl mb-12 opacity-90 max-w-2xl mx-auto font-light text-white">
+                Avancemos con la propuesta y comencemos a recuperar esos leads descapitalizados hoy mismo.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://meetup.atomchat.io/meetings/daniel-hidalgo3" class="px-10 py-5 bg-atomBlack text-white font-bold rounded-full text-lg shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                    Aceptar propuesta y agendar reunión
+                </a>
+            </div>
+        </div>
+        <!-- Decorative Circle -->
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-white/10 rounded-full"></div>
+        <div class="absolute -top-24 -left-24 w-64 h-64 bg-black/10 rounded-full"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-atomBlack text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://hubspot-integrators-prod.s3.amazonaws.com/listing/1053281.png" alt="Atom Logo" class="h-6 w-auto grayscale opacity-50 mr-4">
+                <p>&copy; 2024 Atom Chat. Todos los derechos reservados.</p>
+            </div>
+            <div class="flex space-x-6">
+                <span>Juan Diego Cañamero - CEO Prestaclub</span>
+                <span>|</span>
+                <span>Daniel Hidalgo - Sales Engineer Atom</span>
+            </div>
+        </div>
+    </footer>
+
+    {{ standard_footer_includes }}
+
+    <script>
+        // Initializing AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-white/80');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.add('bg-white/80');
+                nav.classList.remove('bg-white');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
